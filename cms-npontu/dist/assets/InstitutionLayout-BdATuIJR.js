@@ -1,0 +1,1 @@
+import{A as e,D as t,p as n,v as r,w as i}from"./index-Cw1BSsa8.js";import{t as a}from"./AppLayout-DW5y3GPM.js";var o={__name:`InstitutionLayout`,setup(o){return(o,s)=>{let c=t(`router-view`);return i(),n(a,null,{default:e(()=>[r(c)]),_:1})}}};export{o as default};
