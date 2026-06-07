@@ -23,7 +23,7 @@ export default {
         info: { DEFAULT: 'var(--color-info)', bg: 'var(--color-info-bg)' },
         brand: { orange: '#F59E0B', blue: '#0EA5E9', green: '#10B981' },
       },
-      fontFamily: { sans: ['Nunito', 'Montserrat', 'system-ui', '-apple-system', 'sans-serif'] },
+      fontFamily: { sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'] },
       boxShadow: {
         soft: '0 1px 3px 0 rgba(0,0,0,0.04), 0 1px 2px -1px rgba(0,0,0,0.06)',
         card: '0 2px 8px 0 rgba(0,0,0,0.04), 0 1px 3px -1px rgba(0,0,0,0.03)',

@@ -1,1 +1,0 @@
-import{f as e,h as t,i as n,w as r}from"./index-Cw1BSsa8.js";var i={},a={class:`p-6`};function o(n,i){return r(),t(`div`,a,[...i[0]||=[e(`h2`,{class:`text-2xl font-bold text-text mb-4`},`Announcements`,-1),e(`p`,{class:`text-muted`},`Institution and course announcements.`,-1)]])}var s=n(i,[[`render`,o]]);export{s as default};

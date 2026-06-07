@@ -54,7 +54,7 @@ async function handleSubmit() {
   if (!email.value || !password.value || (!isSignIn.value && !name.value)) return
   submitting.value = true
   try {
-    router.push('/student/dashboard')
+    router.push('/student')
   } finally {
     submitting.value = false
   }
@@ -225,7 +225,7 @@ async function handleSubmit() {
               type="submit"
               :disabled="submitting"
               class="auth-cta w-full text-white font-bold tracking-tight flex items-center justify-center gap-2.5 transition-all duration-300"
-              style="height: 72px; border-radius: 100px; background: linear-gradient(90deg, #6C5CE7, #5B6CFF); border: none; box-shadow: 0 4px 24px rgba(91,61,245,0.25); font-size: 18px;"
+              style="height: 72px; border-radius: 100px; background: linear-gradient(90deg, #6C5CE7, #5B6CFF); border: none; box-shadow: 0 4px 24px rgba(91,61,245,0.25); font-size: 17px;"
             >
               <span v-if="!submitting">
                 {{ isSignIn ? 'Sign In' : 'Create Account' }} →
@@ -238,7 +238,7 @@ async function handleSubmit() {
           </form>
 
           <!-- Footer -->
-          <div class="mt-7 text-center">
+          <div class="mt-7 text-center space-y-4">
             <p class="text-sm" style="color: #6B7280;">
               <template v-if="isSignIn">
                 Don't have an account?
@@ -249,12 +249,11 @@ async function handleSubmit() {
                 <router-link to="/login" class="font-semibold transition-colors hover:opacity-80" style="color: #5B3DF5;">Sign In</router-link>
               </template>
             </p>
-          </div>
 
-          <!-- Security Statement -->
-          <div class="mt-6 flex items-center justify-center gap-2 text-xs" style="color: #9CA3AF;">
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-            <span>Your data is secure with us.</span>
+            <div class="flex items-center justify-center gap-2 text-xs" style="color: #9CA3AF;">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+              <span>Your data is secure with us.</span>
+            </div>
           </div>
         </div>
       </div>
@@ -298,6 +297,17 @@ async function handleSubmit() {
   box-shadow: 0 8px 24px rgba(91,61,245,0.15) !important;
 }
 
+/* Toggle button hover */
+.toggle-btn:hover {
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12) !important;
+  transform: translate(-50%, -50%) translateY(-2px) !important;
+}
+
+/* Focus glow shadow */
+input:focus {
+  box-shadow: 8px 8px 20px rgba(0,0,0,0.04), -8px -8px 20px rgba(255,255,255,1), 0 0 0 3px rgba(124,58,237,0.08) !important;
+}
+
 /* Particle floats */
 .particle {
   animation: particle-drift 10s ease-in-out infinite alternate;
@@ -313,16 +323,5 @@ async function handleSubmit() {
 @keyframes particle-drift {
   0% { transform: translate(0, 0) scale(1); }
   100% { transform: translate(15px, -12px) scale(1.2); }
-}
-
-/* Toggle button hover */
-.toggle-btn:hover {
-  box-shadow: 0 16px 40px rgba(0,0,0,0.12) !important;
-  transform: translate(-50%, -50%) translateY(-2px) !important;
-}
-
-/* Focus glow shadow */
-input:focus {
-  box-shadow: 8px 8px 20px rgba(0,0,0,0.04), -8px -8px 20px rgba(255,255,255,1), 0 0 0 3px rgba(124,58,237,0.08) !important;
 }
 </style>
